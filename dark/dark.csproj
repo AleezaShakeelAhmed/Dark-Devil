@@ -1,0 +1,235 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{6BE814D2-F56B-4882-98E5-5CBABE4413D0}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <RootNamespace>dark</RootNamespace>
+    <AssemblyName>dark</AssemblyName>
+    <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <Deterministic>true</Deterministic>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="EZInput, Version=1.3.2.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\EZInput.1.3.2\lib\netstandard2.0\EZInput.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Form1.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form1.Designer.cs">
+      <DependentUpon>Form1.cs</DependentUpon>
+    </Compile>
+    <Compile Include="loss.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="loss.Designer.cs">
+      <DependentUpon>loss.cs</DependentUpon>
+    </Compile>
+    <Compile Include="second.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="second.Designer.cs">
+      <DependentUpon>second.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="running.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="running.Designer.cs">
+      <DependentUpon>running.cs</DependentUpon>
+    </Compile>
+    <Compile Include="third.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="third.Designer.cs">
+      <DependentUpon>third.cs</DependentUpon>
+    </Compile>
+    <Compile Include="winformcs.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="winformcs.Designer.cs">
+      <DependentUpon>winformcs.cs</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="Form1.resx">
+      <DependentUpon>Form1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="loss.resx">
+      <DependentUpon>loss.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="second.resx">
+      <DependentUpon>second.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <EmbeddedResource Include="running.resx">
+      <DependentUpon>running.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="third.resx">
+      <DependentUpon>third.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="winformcs.resx">
+      <DependentUpon>winformcs.cs</DependentUpon>
+    </EmbeddedResource>
+    <None Include="packages.config" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Run%289%29.png.bmp" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Attack %289%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Run %289%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Jump %289%29 %281%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\enemy.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\runleft.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\gate %281%29.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\gat.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\5.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Bullet %281%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Bullet %281%29 %281%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Switch %281%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Switch %281%29 %281%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\gamegate.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\gt.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\key.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\key %281%29.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\keys.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\gateforgame.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\gg.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\lose.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\won.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\dave.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\dd.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ggg.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ggg %281%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\g.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\f5a29c3b-8759-4658-a4d4-b0a1b2587c48-removebg-preview.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\bom.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\bom %281%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\three.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\dragon.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\danger.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\gateuse.png" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>
